@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.topbar {
+    background-color: #161313;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.topbar .nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.topbar a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.topbar a:hover {
+    color: #E74C3C;
+}
+
+.topbar .contact-button {
+    background-color: #E5E4E2;
+    color: #161313;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 15px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.topbar .contact-button:hover {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.back {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    margin-left: 50px;
+}
+
+.litters {
+    flex: 1 1 50%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.litters h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.litters h1 .highlight {
+    color: #E74C3C;
+}
+
+.litters h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #E5E4E2;
+}
+
+.litters p {
+    font-size: 1.125em;
+    margin: 10px 0;
+}
+
+.litters p i {
+    margin-right: 10px;
+    color: #E74C3C;
+}
+
+.profile-image {
+    flex: 1 1 30%;
+    background-image: url('https://res.cloudinary.com/doka2wyj0/image/upload/v1724350338/pogi/sg4im18obiqvldtjzaip.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    filter: brightness(1.1) contrast(1.2);
+}
+
+.resume {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.resume-button {
+    background-color: white;
+    color: #000000;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.resume-button:hover {
+    background-color: #E74C3C;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .back {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .litters {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .profile-image {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        padding: 15px 30px;
+    }
+
+    .topbar .nav-links a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+
+    .litters h1 {
+        font-size: 2.5em;
+    }
+
+    .litters h2 {
+        font-size: 1.5em;
+    }
+
+    .litters p {
+        font-size: 1em;
+    }
+
+    .profile-image {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar {
+        padding: 10px 20px;
+    }
+
+    .topbar .nav-links a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+
+    .topbar .contact-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .litters h1 {
+        font-size: 2em;
+    }
+
+    .litters h2 {
+        font-size: 1.2em;
+    }
+
+    .litters p {
+        font-size: 0.875em;
+    }
+
+    .profile-image {
+        height: 40vh;
+    }
+
+    .back {
+        margin-left: 10px;
+    }
+}
