@@ -1,40 +1,39 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #000000;
+    background-color: #0e0c0c;
     color: white;
-    line-height: 1.6;
+    line-height: 1.5;
     overflow-x: hidden;
 }
 
 .topbar {
-    background-color: #161313;
+    background-color: #000000;
     padding: 15px 50px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0);
 }
 
 .topbar .nav-links {
     display: flex;
-    justify-content: center;
+    gap: 20px;
     flex-grow: 1;
+    justify-content: center;
 }
 
-.topbar a {
+.topbar .nav-links a {
     color: white;
-    margin: 0 20px;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease-in-out;
 }
 
-.topbar a:hover {
+.topbar .nav-links a:hover {
     color: #E74C3C;
 }
 
@@ -45,8 +44,8 @@ body {
     border-radius: 25px;
     text-decoration: none;
     font-size: 18px;
-    margin-left: 15px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin-right: 80px;
 }
 
 .topbar .contact-button:hover {
@@ -61,13 +60,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-top: 100px;
-    margin-left: 50px;
+    margin-left: 90px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .litters {
     flex: 1 1 50%;
     padding-right: 20px;
     box-sizing: border-box;
+    transition: transform 0.5s ease-in-out, top 0.5s ease-in-out;
 }
 
 .litters h1 {
@@ -97,7 +98,7 @@ body {
 
 .profile-image {
     flex: 1 1 30%;
-    background-image: url('https://res.cloudinary.com/doka2wyj0/image/upload/v1724350338/pogi/sg4im18obiqvldtjzaip.png');
+    background-image: url('https://res.cloudinary.com/doka2wyj0/image/upload/v1724627227/pogi/oghckezv2h9wjdwnzeul.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -122,6 +123,40 @@ body {
 .resume-button:hover {
     background-color: #E74C3C;
     color: white;
+}
+
+.about {
+    position: fixed;
+    top: 100%;
+    left: 50px;
+    right: 50px;
+    bottom: 0;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out, top 0.5s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    overflow-y: auto;
+    display: none;
+}
+
+.about.active {
+    display: block;
+    top: 90px;
+}
+
+.litters.active {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: scale(0.5);
+    z-index: 1001;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 @media (max-width: 1024px) {
@@ -202,3 +237,4 @@ body {
         margin-left: 10px;
     }
 }
+
