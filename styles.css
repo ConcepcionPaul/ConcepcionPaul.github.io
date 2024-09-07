@@ -105,6 +105,7 @@ body {
     filter: brightness(1.1) contrast(1.2);
 }
 
+
 .resume {
     text-align: left;
     margin-top: 20px;
@@ -139,6 +140,9 @@ body {
     z-index: 999;
     overflow-y: auto;
     display: none;
+    /* Custom scrollbar styles */
+    scrollbar-width: thin;
+    scrollbar-color: #444 #000;
 }
 
 .about.active {
@@ -267,141 +271,85 @@ body {
     margin-right: 5px;
 }
 
-.education,
-.projects,
-.contact {
-    position: fixed;
-    top: 100%;
-    left: 50px;
-    right: 50px;
-    bottom: 0;
-    background-color: #000000;
-    color: white;
-    padding: 20px;
-    transition: transform 0.5s ease-in-out, top 0.5s ease-in-out;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    overflow-y: auto;
-    display: none;
-}
-
-.education.active,
-.projects.active,
-.contact.active {
-    display: block;
-    top: 90px;
-}
-
-header h2 {
-    color: #fff;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.education-content,
-.projects-content,
-.contact-content {
-    margin-top: 20px;
-}
-
-.education-item,
-.project-item {
-    margin-bottom: 20px;
-}
-
-.education-item h3,
-.project-item h3 {
-    color: #e74c3c;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.education-item p,
-.project-item p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.about::-webkit-scrollbar,
-.education::-webkit-scrollbar,
-.projects::-webkit-scrollbar,
-.contact::-webkit-scrollbar {
+.about::-webkit-scrollbar {
     width: 8px; /* Adjust the width of the scrollbar */
 }
 
-.about::-webkit-scrollbar-track,
-.education::-webkit-scrollbar-track,
-.projects::-webkit-scrollbar-track,
-.contact::-webkit-scrollbar-track {
+.about::-webkit-scrollbar-track {
     background: #000; /* Track color */
 }
 
-.about::-webkit-scrollbar-thumb,
-.education::-webkit-scrollbar-thumb,
-.projects::-webkit-scrollbar-thumb,
-.contact::-webkit-scrollbar-thumb {
+.about::-webkit-scrollbar-thumb {
     background: #000; /* Scrollbar color */
     border-radius: 10px; /* Round the corners of the scrollbar */
 }
 
-.about::-webkit-scrollbar-thumb:hover,
-.education::-webkit-scrollbar-thumb:hover,
-.projects::-webkit-scrollbar-thumb:hover,
-.contact::-webkit-scrollbar-thumb:hover {
+.about::-webkit-scrollbar-thumb:hover {
     background: #000; /* Color when hovering over the scrollbar */
 }
 
+/* Responsive Styles */
 @media (max-width: 1024px) {
-    .about .about-content,
-    .education .education-content,
-    .projects .projects-content,
-    .contact .contact-content {
+    .about .about-content {
         flex-direction: column;
-        align-items: center;
     }
 
-    .about .image-placeholder,
-    .education .image-placeholder,
-    .projects .image-placeholder,
-    .contact .image-placeholder {
+    .about .image-placeholder {
         width: 100%;
-        height: auto;
+        height: 300px;
         margin-right: 0;
     }
 
-    .about .description,
-    .education .description,
-    .projects .description,
-    .contact .description {
+    .about .description {
         width: 100%;
     }
+}
 
-    .about .contact-info,
-    .education .contact-info,
-    .projects .contact-info,
-    .contact .contact-info {
+@media (max-width: 768px) {
+    .about .contact-info {
         flex-direction: column;
-        align-items: center;
     }
 
     .about .contact-info .left,
-    .education .contact-info .left,
-    .projects .contact-info .left,
-    .contact .contact-info .left,
-    .about .contact-info .right,
-    .education .contact-info .right,
-    .projects .contact-info .right,
-    .contact .contact-info .right {
+    .about .contact-info .right {
         width: 100%;
-        text-align: center;
-    }
-
-    .about .bio,
-    .education .bio,
-    .projects .bio,
-    .contact .bio {
-        font-size: 14px;
-        line-height: 1.5;
     }
 }
+
+@media (max-width: 480px) {
+    .topbar {
+        padding: 10px 20px;
+    }
+
+    .topbar .nav-links a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+
+    .topbar .contact-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .litters h1 {
+        font-size: 2em;
+    }
+
+    .litters h2 {
+        font-size: 1.2em;
+    }
+
+    .litters p {
+        font-size: 0.875em;
+    }
+
+    .profile-image {
+        height: 40vh;
+    }
+
+    .back {
+        margin-left: 10px;
+    }
+}
+
 
