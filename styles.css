@@ -146,95 +146,262 @@ body {
     top: 90px;
 }
 
-.litters.active {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    transform: scale(0.5);
-    z-index: 1001;
+.about header h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.about-content {
-    max-width: 1200px;
-    margin: 0 auto;
+.about .about-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about .image-placeholder {
+    width: 23%;
+    height: 600px;
+    background-image: url('https://res.cloudinary.com/doka2wyj0/image/upload/v1725241980/ja/gou8ipvejufcjdqij9gb.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-right: 30px;
+}
+
+.about .description {
+    width: 70%;
+}
+
+.about .description h1 {
+    color: #e74c3c;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about .description p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.about .contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.about .contact-info .left,
+.about .contact-info .right {
+    width: 48%;
+}
+
+.about .contact-info p {
+    margin-bottom: 10px;
+}
+
+.about .contact-info p strong::before {
+    content: '>';
+    color: #E74C3C;
+    margin-right: 5px;
+}
+
+.about .bio {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.about .bio p {
+    margin: 10px 0;
+}
+
+.about .interest-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.about .interest-item {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about .interest-item img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.about .interest-item p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.about .skills {
+    margin-top: 40px;
+}
+
+.about .skills h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.about .skill-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .skill-column {
+    width: 45%;
+}
+
+.about .skill-column p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.about .skill-column p strong::before {
+    content: '>';
+    color: #E74C3C;
+    margin-right: 5px;
+}
+
+.education,
+.projects,
+.contact {
+    position: fixed;
+    top: 100%;
+    left: 50px;
+    right: 50px;
+    bottom: 0;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out, top 0.5s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    overflow-y: auto;
+    display: none;
+}
+
+.education.active,
+.projects.active,
+.contact.active {
+    display: block;
+    top: 90px;
+}
+
+header h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.education-content,
+.projects-content,
+.contact-content {
+    margin-top: 20px;
+}
+
+.education-item,
+.project-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3,
+.project-item h3 {
+    color: #e74c3c;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.education-item p,
+.project-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.about::-webkit-scrollbar,
+.education::-webkit-scrollbar,
+.projects::-webkit-scrollbar,
+.contact::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+}
+
+.about::-webkit-scrollbar-track,
+.education::-webkit-scrollbar-track,
+.projects::-webkit-scrollbar-track,
+.contact::-webkit-scrollbar-track {
+    background: #000; /* Track color */
+}
+
+.about::-webkit-scrollbar-thumb,
+.education::-webkit-scrollbar-thumb,
+.projects::-webkit-scrollbar-thumb,
+.contact::-webkit-scrollbar-thumb {
+    background: #000; /* Scrollbar color */
+    border-radius: 10px; /* Round the corners of the scrollbar */
+}
+
+.about::-webkit-scrollbar-thumb:hover,
+.education::-webkit-scrollbar-thumb:hover,
+.projects::-webkit-scrollbar-thumb:hover,
+.contact::-webkit-scrollbar-thumb:hover {
+    background: #000; /* Color when hovering over the scrollbar */
 }
 
 @media (max-width: 1024px) {
-    .back {
+    .about .about-content,
+    .education .education-content,
+    .projects .projects-content,
+    .contact .contact-content {
         flex-direction: column;
-        height: auto;
+        align-items: center;
     }
 
-    .litters {
-        padding-right: 0;
+    .about .image-placeholder,
+    .education .image-placeholder,
+    .projects .image-placeholder,
+    .contact .image-placeholder {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .about .description,
+    .education .description,
+    .projects .description,
+    .contact .description {
+        width: 100%;
+    }
+
+    .about .contact-info,
+    .education .contact-info,
+    .projects .contact-info,
+    .contact .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .contact-info .left,
+    .education .contact-info .left,
+    .projects .contact-info .left,
+    .contact .contact-info .left,
+    .about .contact-info .right,
+    .education .contact-info .right,
+    .projects .contact-info .right,
+    .contact .contact-info .right {
+        width: 100%;
         text-align: center;
     }
 
-    .profile-image {
-        height: 60vh;
-    }
-}
-
-@media (max-width: 768px) {
-    .topbar {
-        padding: 15px 30px;
-    }
-
-    .topbar .nav-links a {
-        margin: 0 10px;
-        font-size: 16px;
-    }
-
-    .litters h1 {
-        font-size: 2.5em;
-    }
-
-    .litters h2 {
-        font-size: 1.5em;
-    }
-
-    .litters p {
-        font-size: 1em;
-    }
-
-    .profile-image {
-        height: 50vh;
-    }
-}
-
-@media (max-width: 480px) {
-    .topbar {
-        padding: 10px 20px;
-    }
-
-    .topbar .nav-links a {
-        margin: 0 5px;
+    .about .bio,
+    .education .bio,
+    .projects .bio,
+    .contact .bio {
         font-size: 14px;
-    }
-
-    .topbar .contact-button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .litters h1 {
-        font-size: 2em;
-    }
-
-    .litters h2 {
-        font-size: 1.2em;
-    }
-
-    .litters p {
-        font-size: 0.875em;
-    }
-
-    .profile-image {
-        height: 40vh;
-    }
-
-    .back {
-        margin-left: 10px;
+        line-height: 1.5;
     }
 }
 
