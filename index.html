@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Paul Dexter Concepcion — CS student and aspiring graphic designer. View about, education, projects, and contact information.">
     <title>Paul Dexter Concepcion Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -10,14 +11,15 @@
 <body>
     <div class="topbar">
         <div class="nav-links">
-            <a href="#" id="home-link">Home</a>
-            <a href="#" id="about-link">About</a>
-            <a href="#">Education</a>
-            <a href="#">Projects</a>
+            <a href="#home" id="home-link">Home</a>
+            <a href="#about" id="about-link">About</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
         </div>
-        <a href="#" class="contact-button">Contact me</a>
+        <a href="#contact" class="contact-button">Contact me</a>
     </div>
 
+    <section id="home" class="home">
     <div class="back">
         <div class="litters">
             <h1>Hello World I'm <br>
@@ -37,12 +39,14 @@
         </div>
         <div class="profile-image"></div>
     </div>
+    </section>
 
     <!-- About Section -->
-    <div class="about" id="about-section">
+    <div class="about" id="about-section" aria-hidden="true" role="dialog" aria-labelledby="about-title">
         <!-- Upper Part -->
         <header>
-            <h2>ABOUT ME</h2>
+            <h2 id="about-title">ABOUT ME</h2>
+            <button class="about-close" id="about-close" aria-label="Close About">&times;</button>
         </header>
 
         <section class="about-upper">
@@ -121,6 +125,98 @@
             </div>
         </section>
     </div>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <header>
+                <h2>Education</h2>
+            </header>
+            <div class="edu">
+                <div class="edu-item">
+                    <h3>BS Computer Science</h3>
+                    <p><strong>3rd Year</strong> • 2023 – Present</p>
+                    <p>Core coursework in programming, data structures, and design fundamentals.</p>
+                </div>
+                <div class="edu-item">
+                    <h3>Senior High School</h3>
+                    <p><strong>STEM</strong> • Graduated</p>
+                    <p>Focus on technology, math, and visual communication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <header>
+                <h2>Projects</h2>
+            </header>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-thumb" aria-hidden="true"></div>
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive personal site with an animated About overlay and sections for education and projects.</p>
+                    <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn" aria-disabled="true">Live</a>
+                        <a href="#" class="btn" aria-disabled="true">Code</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-thumb" aria-hidden="true"></div>
+                    <h3>Simple Image Editor</h3>
+                    <p>Basic web-based editor for cropping and filters. Placeholder demo.</p>
+                    <div class="tags">
+                        <span>JS</span><span>Canvas</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn" aria-disabled="true">Live</a>
+                        <a href="#" class="btn" aria-disabled="true">Code</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-thumb" aria-hidden="true"></div>
+                    <h3>Poster Design Set</h3>
+                    <p>A set of poster mockups showcasing layout and typography. Placeholder gallery.</p>
+                    <div class="tags">
+                        <span>Design</span><span>Illustrator</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn" aria-disabled="true">Gallery</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <header>
+                <h2>Contact</h2>
+            </header>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Get in touch</h3>
+                    <p>Email is the fastest way to reach me.</p>
+                    <p><i class="fas fa-envelope"></i> <a class="link" href="mailto:paloma28loma@gmail.com">paloma28loma@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a class="link" href="tel:+639447147144">(+63) 944 7147 144</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>Social</h3>
+                    <p>
+                        <a class="link" href="#" aria-disabled="true"><i class="fab fa-facebook"></i> Facebook</a><br>
+                        <a class="link" href="#" aria-disabled="true"><i class="fab fa-instagram"></i> Instagram</a><br>
+                        <a class="link" href="#" aria-disabled="true"><i class="fab fa-github"></i> GitHub</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
