@@ -710,13 +710,13 @@ main {
 
 .site-footer {
     padding: 0 0 2rem;
+    border-top: 1px solid var(--border);
 }
 
 .footer-inner {
     width: min(calc(100% - 40px), var(--max-width));
     margin: 0 auto;
     padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
     display: flex;
     justify-content: center;
     gap: 1rem;

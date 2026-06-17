@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 message
             ].join("\n");
 
-            const mailtoUrl = `mailto:paloma28loma@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            const mailtoUrl = `mailto:paul28concepcion@gamil.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             formStatus.textContent = "Your email app should open with a drafted message to Paul.";
             window.location.href = mailtoUrl;
         });
