@@ -4,6 +4,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("main section[id]");
     const navLinksMap = new Map();
 
+    const portraitSlideshow = document.getElementById("portrait-slideshow");
+    if (portraitSlideshow) {
+        const portraitSources = [
+            portraitSlideshow.src,
+            ...portraitSlideshow.dataset.slides.split(",")
+        ];
+        let activePortrait = 0;
+
+        portraitSources.slice(1).forEach((source) => {
+            const preloadImage = new Image();
+            preloadImage.src = source;
+        });
+
+        window.setInterval(() => {
+            portraitSlideshow.classList.add("is-changing");
+
+            window.setTimeout(() => {
+                activePortrait = (activePortrait + 1) % portraitSources.length;
+                portraitSlideshow.src = portraitSources[activePortrait];
+                portraitSlideshow.classList.remove("is-changing");
+            }, 650);
+        }, 4000);
+    }
+
     document.querySelectorAll('.nav-links a[href^="#"]').forEach((link) => {
         const href = link.getAttribute("href");
         if (href) {

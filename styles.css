@@ -370,6 +370,15 @@ main {
     object-position: center top;
 }
 
+#portrait-slideshow {
+    opacity: 1;
+    transition: opacity 0.65s ease-in-out;
+}
+
+#portrait-slideshow.is-changing {
+    opacity: 0;
+}
+
 .portrait-frame::after {
     content: "";
     position: absolute;
