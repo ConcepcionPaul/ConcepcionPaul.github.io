@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "ConcepcionPaul.github.io"
     ]);
     const webRepositoryNames = new Set([
+        "EVIE-SKIN",
         "The_Mood-API",
         "Votto_system",
         "StarBucks-Ecommerce",
@@ -53,6 +54,14 @@ document.addEventListener("DOMContentLoaded", () => {
     ]);
     const githubRepositoriesUrl = "https://api.github.com/users/ConcepcionPaul/repos?per_page=100&sort=updated";
     const repositorySnapshot = [
+        {
+            name: "EVIE-SKIN",
+            html_url: "https://github.com/ConcepcionPaul/EVIE-SKIN",
+            description: "This site showcases a modern, responsive landing page for the EvieSkin skincare brand, featuring product highlights, ingredient details, and easy navigation.",
+            language: "CSS",
+            homepage: "https://evieskinapp.vercel.app/",
+            updated_at: "2026-07-19T13:45:09Z"
+        },
         {
             name: "The_Mood-API",
             html_url: "https://github.com/ConcepcionPaul/The_Mood-API",
@@ -229,6 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "tapsiloganpos": "images/vid/TapsiloganPOS.mp4"
     };
     const repositoryImageCovers = {
+        "evie-skin": "images/project/EVIE-SKIN.png",
         "the-mood-api": "images/project/The_Mood-API.png",
         "votto-system": "images/project/Votto_system.png",
         "starbucks-ecommerce": "images/project/StarBucks-Ecommerce.png",
@@ -241,6 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "nytimes-clone": "images/project/Nytimes_Clone.png"
     };
     const repositoryDescriptions = {
+        "evie-skin": "A modern, responsive landing page for the EvieSkin skincare brand, featuring product highlights, ingredient details, and easy navigation.",
         "the-mood-api": "A JWT-secured social API for sharing Moods, with accounts, profiles, timelines, follows, likes, comments, and full CRUD support.",
         "votto-system": "A Node.js, Express, and MySQL voting system with Docker deployment, Nginx load balancing, multiple backends, and database replication.",
         "starbucks-ecommerce": "A Starbucks-style e-commerce application with a PHP and MySQL API plus a vanilla HTML, CSS, and JavaScript storefront.",
